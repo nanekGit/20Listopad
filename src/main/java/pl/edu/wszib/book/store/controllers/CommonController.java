@@ -23,6 +23,7 @@ public class CommonController {
     @RequestMapping(value = "/main",method = RequestMethod.GET)
     public String main(Model model){
         List<Book> books=booksRepository.getAllBooks();
+        model.addAttribute("books",books);
         return "main";
     }
 
@@ -31,6 +32,10 @@ public class CommonController {
         return "contact";
     }
 
+    @RequestMapping(value = "/test",method = RequestMethod.GET)
+    public String testPage(){
+        return "redirect:https://localhost/phpmyadmin";
+    }
 
     @RequestMapping(value = "/cos/{param1}/{param2}", method = RequestMethod.GET)
     public String httpRequestAction(@PathVariable String param1,

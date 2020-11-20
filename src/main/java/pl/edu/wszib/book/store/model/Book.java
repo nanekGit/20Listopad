@@ -18,6 +18,17 @@ public class Book {
         this.pieces = pieces;
     }
 
+    @Override
+    public String toString() {
+        return "Book{" +
+                "title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                ", isbn='" + isbn + '\'' +
+                ", price=" + price +
+                ", pieces=" + pieces +
+                '}';
+    }
+
     public String getTitle() {
         return title;
     }
