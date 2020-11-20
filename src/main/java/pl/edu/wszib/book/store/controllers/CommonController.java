@@ -1,22 +1,39 @@
 package pl.edu.wszib.book.store.controllers;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class CommonController {
 
-    @RequestMapping(value = "/cos", method = RequestMethod.GET)
-    public String httpRequestAction(){
+    @RequestMapping(value = "/",method = RequestMethod.GET)
+    public String landingPage(){
+        return "redirect:/main";
+    }
+
+    @RequestMapping(value = "/main",method = RequestMethod.GET)
+    public String httpMain(){
+        return "main";
+    }
+
+
+    @RequestMapping(value = "/cos/{param1}/{param2}", method = RequestMethod.GET)
+    public String httpRequestAction(@PathVariable String param1,
+                                    @PathVariable String param2){
         System.out.println("1111111\n1111111\n1111111\n1111111");
+        System.out.println(param1);
+        System.out.println(param2);
         return "main";
     }
 
     @GetMapping(value = "/cos2") //to samo co request, tylko zawsze robi GET
-    public String httpRequestAction2(){
+    public String httpRequestAction2(@RequestParam String name,
+                                     @RequestParam String surname){
         System.out.println("2222222\n2222222\n2222222\n2222222");
+        System.out.println(name);
+        System.out.println(surname);
+        //http://127.0.0.1:8080/cos2?name=test&surname=zupa
+        //Pierwszy z ? a każdy następny z &
         return "main";
     }
 
@@ -27,7 +44,7 @@ public class CommonController {
     }
 
     @RequestMapping(value = "/test/z", method = RequestMethod.GET)
-    public String httpRequestActionz(){
+    public String httpRequestAction4(){
         System.out.println("zzzzzzz\nzzzzzzz\nzzzzzzz\nzzzzzzz");
         return "main";
     }
