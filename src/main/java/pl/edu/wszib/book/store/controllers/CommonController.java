@@ -12,8 +12,13 @@ public class CommonController {
     }
 
     @RequestMapping(value = "/main",method = RequestMethod.GET)
-    public String httpMain(){
+    public String main(){
         return "main";
+    }
+
+    @RequestMapping(value = "/contact",method = RequestMethod.GET)
+    public String kontakt(){
+        return "contact";
     }
 
 
