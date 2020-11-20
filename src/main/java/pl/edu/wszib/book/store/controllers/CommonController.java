@@ -1,10 +1,19 @@
 package pl.edu.wszib.book.store.controllers;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import pl.edu.wszib.book.store.database.iBooksRepository;
+import pl.edu.wszib.book.store.model.Book;
+
+import java.util.List;
 
 @Controller
 public class CommonController {
+
+    @Autowired
+    iBooksRepository booksRepository;
 
     @RequestMapping(value = "/",method = RequestMethod.GET)
     public String landingPage(){
@@ -12,7 +21,8 @@ public class CommonController {
     }
 
     @RequestMapping(value = "/main",method = RequestMethod.GET)
-    public String main(){
+    public String main(Model model){
+        List<Book> books=booksRepository.getAllBooks();
         return "main";
     }
 
