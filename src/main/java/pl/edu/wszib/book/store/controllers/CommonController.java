@@ -15,25 +15,26 @@ public class CommonController {
     @Autowired
     iBooksRepository booksRepository;
 
-    @RequestMapping(value = "/",method = RequestMethod.GET)
+    @RequestMapping(value = "/", method = RequestMethod.GET)
     public String landingPage(){
         return "redirect:/main";
     }
 
-    @RequestMapping(value = "/main",method = RequestMethod.GET)
+    @RequestMapping(value = "/main", method = RequestMethod.GET)
     public String main(Model model){
         List<Book> books=booksRepository.getAllBooks();
         model.addAttribute("books",books);
         return "main";
     }
 
-    @RequestMapping(value = "/contact",method = RequestMethod.GET)
+    @RequestMapping(value = "/contact", method = RequestMethod.GET)
     public String kontakt(){
         return "contact";
     }
 
-    @RequestMapping(value = "/test",method = RequestMethod.GET)
+    @RequestMapping(value = "/XAMPP", method = RequestMethod.GET)
     public String testPage(){
+        //experyment czy działa redirect
         return "redirect:https://localhost/phpmyadmin";
     }
 
@@ -43,6 +44,7 @@ public class CommonController {
         System.out.println("1111111\n1111111\n1111111\n1111111");
         System.out.println(param1);
         System.out.println(param2);
+        //http://127.0.0.1:8080/cos/param1/param2
         return "main";
     }
 
@@ -54,18 +56,6 @@ public class CommonController {
         System.out.println(surname);
         //http://127.0.0.1:8080/cos2?name=test&surname=zupa
         //Pierwszy z ? a każdy następny z &
-        return "main";
-    }
-
-    @RequestMapping(value = "/cos3", method = RequestMethod.GET)
-    public String httpRequestAction3(){
-        System.out.println("3333333\n33333333\n333333\n3333333");
-        return "main";
-    }
-
-    @RequestMapping(value = "/test/z", method = RequestMethod.GET)
-    public String httpRequestAction4(){
-        System.out.println("zzzzzzz\nzzzzzzz\nzzzzzzz\nzzzzzzz");
         return "main";
     }
 }

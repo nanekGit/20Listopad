@@ -1,6 +1,7 @@
 package pl.edu.wszib.book.store.model;
 
 public class Book {
+
     private String title;
     private String author;
     private String isbn;
@@ -16,17 +17,6 @@ public class Book {
         this.isbn = isbn;
         this.price = price;
         this.pieces = pieces;
-    }
-
-    @Override
-    public String toString() {
-        return "Book{" +
-                "title='" + title + '\'' +
-                ", author='" + author + '\'' +
-                ", isbn='" + isbn + '\'' +
-                ", price=" + price +
-                ", pieces=" + pieces +
-                '}';
     }
 
     public String getTitle() {

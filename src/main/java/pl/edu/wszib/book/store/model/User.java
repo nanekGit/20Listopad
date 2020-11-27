@@ -1,23 +1,16 @@
 package pl.edu.wszib.book.store.model;
 
 public class User {
+
     private String login;
     private String pass;
 
-    private User() {
+    public User() {
     }
 
     public User(String login, String pass) {
         this.login = login;
         this.pass = pass;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "login='" + login + '\'' +
-                ", pass='" + pass + '\'' +
-                '}';
     }
 
     public String getLogin() {

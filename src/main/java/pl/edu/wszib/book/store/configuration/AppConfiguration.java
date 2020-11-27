@@ -6,4 +6,6 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ComponentScan("pl.edu.wszib.book.store")
 public class AppConfiguration {
+
+
 }

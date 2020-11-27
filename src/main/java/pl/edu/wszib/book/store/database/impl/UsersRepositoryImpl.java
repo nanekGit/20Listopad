@@ -9,6 +9,7 @@ import java.util.List;
 
 @Component
 public class UsersRepositoryImpl implements iUsersRepository {
+
     private final List<User> users = new ArrayList<>();
 
     public UsersRepositoryImpl() {
@@ -17,13 +18,13 @@ public class UsersRepositoryImpl implements iUsersRepository {
     }
 
     @Override
-    public boolean authenticate(User user) {
+    public User authenticate(User user) {
         for(User userDB : this.users){
             if(userDB.getLogin().equals(user.getLogin())
                     && userDB.getPass().equals(user.getPass())){
-                return true;
+                return userDB;
             }
         }
-        return false;
+        return null;
     }
 }
