@@ -1,3 +1,11 @@
+html {
+    height: 100%;
+}
+
+body{
+    background-color: #777;
+}
+
 #logo{
     width: 800px;
     margin: 0 auto;
