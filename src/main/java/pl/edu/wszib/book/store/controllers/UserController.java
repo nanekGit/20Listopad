@@ -44,7 +44,7 @@ public class UserController {
     public String stronaKonta(Model model){
         model.addAttribute("isLogged", sessionObject.isLogged());
         if(this.sessionObject.isLogged()){
-            return "contact";
+            return "koszyk";
         }
         return "redirect:http://localhost:8080/login";
     }
