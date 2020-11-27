@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Rejestracja</title>
+    <link rel="stylesheet" href="/register.css">
+    <link rel="stylesheet" href="/commons.css">
+    <script src="/registerValidator.js"></script>
+</head>
+<body>
+
+<div th:replace="fragments.html :: logo"></div>
+<div th:replace="fragments.html :: menu"></div>
+
+<form id="register-form" method="post" onsubmit="return validate()">
+    <input type="text" placeholder="Login" th:field="*{userModel.login}" id="login">
+    <input type="password" placeholder="Hasło" th:field="*{userModel.pass}" id="pass">
+    <input type="password" placeholder="Powtórz Hasło" id="pass2">
+    <input type="submit" value="Zarejestruj">
+</form>
+
+</body>
+</html>

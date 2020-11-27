@@ -18,7 +18,7 @@ public class UsersRepositoryImpl implements iUsersRepository {
     }
 
     @Override
-    public User authenticate(User user) {
+    public User Authenticate(User user) {
         for(User userDB : this.users){
             if(userDB.getLogin().equals(user.getLogin())
                     && userDB.getPass().equals(user.getPass())){
@@ -26,5 +26,14 @@ public class UsersRepositoryImpl implements iUsersRepository {
             }
         }
         return null;
+    }
+
+    @Override
+    public boolean Register(User user) {
+        if(this.Authenticate(user)==null){
+            this.users.add(user);
+            return true;
+        }
+        return false;
     }
 }

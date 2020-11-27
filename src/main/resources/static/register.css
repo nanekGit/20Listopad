@@ -1,9 +1,9 @@
-#login-form{
+#register-form{
     width: 800px;
     margin: 70px auto;
 }
 
-#login-form input[type="text"]{
+#register-form input[type="text"]{
     width: 80%;
     margin: 10px auto;
     display: block;
@@ -11,7 +11,7 @@
     text-align: center;
 }
 
-#login-form input[type="password"]{
+#register-form input[type="password"]{
     width: 80%;
     margin: 10px auto;
     display: block;
@@ -19,7 +19,7 @@
     text-align: center;
 }
 
-#login-form input[type="submit"]{
+#register-form input[type="submit"]{
     width: 200px;
     margin: 10px auto;
     display: block;
@@ -33,20 +33,7 @@
     transition: color 0.5s, background-color 0.5s;
 }
 
-#login-form input[type="submit"]:hover{
+#register-form input[type="submit"]:hover{
     color: white;
     background-color: black;
-}
-
-#register-link{
-    width: 112px;
-    display: block;
-    margin: 0 auto;
-    font-size: 26px;
-    color: black;
-    transition: color 1s;
-}
-
-#register-link:hover{
-    color: red;
 }

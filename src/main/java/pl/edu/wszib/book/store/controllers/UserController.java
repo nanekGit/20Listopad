@@ -27,12 +27,13 @@ public class UserController {
             return "redirect:/main";
         }
         model.addAttribute("userModel", new User());
+        model.addAttribute("isLogged", sessionObject.isLogged());
         return "login";
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String loginSubmit(@ModelAttribute User user){
-        this.sessionObject.setLoggedUser(this.usersRepository.authenticate(user));
+        this.sessionObject.setLoggedUser(this.usersRepository.Authenticate(user));
         if(this.sessionObject.isLogged()){
             return "redirect:/main";
         }
@@ -40,7 +41,8 @@ public class UserController {
     }
 
     @RequestMapping(value = "/koszyk", method = RequestMethod.GET)
-    public String stronaKonta(){
+    public String stronaKonta(Model model){
+        model.addAttribute("isLogged", sessionObject.isLogged());
         if(this.sessionObject.isLogged()){
             return "contact";
         }
@@ -53,6 +55,21 @@ public class UserController {
         return "redirect:http://localhost:8080/login";
     }
 
+    @RequestMapping(value = "/register", method = RequestMethod.GET)
+    public String register(Model model){
+        model.addAttribute("userModel", new User());
+        model.addAttribute("isLogged", sessionObject.isLogged());
+        return "register";
+    }
+
+    @RequestMapping(value = "/register", method = RequestMethod.POST)
+    public String registerSubmit(@ModelAttribute User user){
+        if(this.usersRepository.Register(user)){
+            return "redirect:/main";
+        }
+        return "redirect:http://localhost:8080/login";
+    }
+
     /*
     Stara wersja gdy formularz zwracał logowanie z pomocą name=""
 
@@ -60,7 +77,7 @@ public class UserController {
     public String loginSubmit(@RequestParam String login,
                               @RequestParam String pass){
         User user = new User(login,pass);
-        if(this.usersRepository.authenticate(user)){
+        if(this.usersRepository.Authenticate(user)){
             return "redirect:/main";
         }else{
             return "login";
