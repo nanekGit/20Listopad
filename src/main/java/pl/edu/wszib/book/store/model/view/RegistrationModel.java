@@ -1,18 +1,18 @@
-package pl.edu.wszib.book.store.model;
+package pl.edu.wszib.book.store.model.view;
 
-public class User {
+public class RegistrationModel {
 
     private String login;
     private String pass;
-    private Role rola;
+    private String pass2;
 
-    public User() {
+    public RegistrationModel() {
     }
 
-    public User(String login, String pass, Role rola) {
+    public RegistrationModel(String login, String pass, String pass2) {
         this.login = login;
         this.pass = pass;
-        this.rola = rola;
+        this.pass2 = pass2;
     }
 
     public String getLogin() {
@@ -31,11 +31,11 @@ public class User {
         this.pass = pass;
     }
 
-    public Role getRola() {
-        return rola;
+    public String getPass2() {
+        return pass2;
     }
 
-    public void setRola(Role rola) {
-        this.rola = rola;
+    public void setPass2(String pass2) {
+        this.pass2 = pass2;
     }
 }

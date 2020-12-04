@@ -19,6 +19,10 @@ public class Book {
         this.pieces = pieces;
     }
 
+    public Book clone(){
+        return new Book(this.title, this.author, this.isbn, this.pieces, this.pieces);
+    }
+
     public String getTitle() {
         return title;
     }

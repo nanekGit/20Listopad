@@ -13,18 +13,34 @@ function validate(){
     var flag = true;
 
     if(!regex.test(login)){
-        alert("Login za krótki, minimum 5 znaków.");
+        document.getElementById("login").style.backgroundColor = "red";
         flag = false;
+    }else{
+        document.getElementById("login").style.backgroundColor = "white";
     }
 
     if(!regex.test(pass)){
-        alert("Hasło za krótkie, minimum 5 znaków.");
+        document.getElementById("pass").style.backgroundColor = "red";
         flag = false;
+    }else{
+        document.getElementById("pass").style.backgroundColor = "white";
+    }
+
+    if(!regex.test(pass2)){
+        document.getElementById("pass2").style.backgroundColor = "red";
+        flag = false;
+    }else{
+        document.getElementById("pass2").style.backgroundColor = "white";
     }
 
     if(pass!==pass2){
-        alert("Hasło i Powtórz Hasło się różnią.");
+        document.getElementById("pass").style.backgroundColor = "red";
+        document.getElementById("pass2").style.backgroundColor = "red";
         flag = false;
+    }else if(flag){
+        document.getElementById("pass").style.backgroundColor = "white";
+        document.getElementById("pass2").style.backgroundColor = "white";
     }
+
     return flag;
 }

@@ -15,7 +15,7 @@
     <a href="/contact" class="menu-button">Kontakt</a>
     <a href="/XAMPP" class="menu-button" target="_blank">XAMPP</a>
     <br>
-    <a href="/koszyk" class="menu-button">Koszyk</a>
+    <a href="/koszyk" class="menu-button" th:if="${isLogged}">Koszyk</a>
     <a href="/login" class="menu-button" th:if="${!isLogged}">Zaloguj</a>
     <a href="/logout" class="menu-button" th:if="${isLogged}">Wyloguj</a>
 </div>

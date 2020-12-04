@@ -1,6 +1,33 @@
-#content{
-    text-align: center;
-    font-size: 30px;
-    margin-top: 100px;
-    color: blue;
+.header{
+    margin: 50px auto 10px auto;
+    width: 80%;
+}
+
+.row{
+    width: 80%;
+    margin: 10px auto;
+}
+
+.title{
+    width: 30%;
+    font-size: 20px;
+    display: inline-block;
+}
+
+.pieces{
+    width: 20%;
+    font-size: 20px;
+    display: inline-block;
+}
+
+.price{
+    width: 20%;
+    font-size: 20px;
+    display: inline-block;
+}
+
+.total{
+    width: 20%;
+    font-size: 20px;
+    display: inline-block;
 }

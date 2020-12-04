@@ -5,11 +5,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import pl.edu.wszib.book.store.database.iBooksRepository;
-import pl.edu.wszib.book.store.model.Book;
 import pl.edu.wszib.book.store.session.SessionObject;
 
 import javax.annotation.Resource;
-import java.util.List;
 
 @Controller
 public class CommonController {
@@ -27,15 +25,19 @@ public class CommonController {
 
     @RequestMapping(value = "/main", method = RequestMethod.GET)
     public String main(Model model){
-        List<Book> books=booksRepository.getAllBooks();
-        model.addAttribute("books",books);
-        model.addAttribute("isLogged",sessionObject.isLogged());
+        model.addAttribute("books", this.booksRepository.getAllBooks());
+        model.addAttribute("isLogged", this.sessionObject.isLogged());
+        if(this.sessionObject.isLogged()) {
+            model.addAttribute("role", this.sessionObject.getLoggedUser().getRola());
+        }else{
+            model.addAttribute("role", null);
+        }
         return "main";
     }
 
     @RequestMapping(value = "/contact", method = RequestMethod.GET)
     public String kontakt(Model model){
-        model.addAttribute("isLogged",sessionObject.isLogged());
+        model.addAttribute("isLogged",this.sessionObject.isLogged());
         return "contact";
     }
 
@@ -47,22 +49,26 @@ public class CommonController {
 
     @RequestMapping(value = "/cos/{param1}/{param2}", method = RequestMethod.GET)
     public String httpRequestAction(@PathVariable String param1,
-                                    @PathVariable String param2){
+                                    @PathVariable String param2,
+                                    Model model){
         System.out.println("1111111\n1111111\n1111111\n1111111");
         System.out.println(param1);
         System.out.println(param2);
+        model.addAttribute("isLogged",this.sessionObject.isLogged());
         //http://127.0.0.1:8080/cos/param1/param2
-        return "main";
+        return "contact";
     }
 
     @GetMapping(value = "/cos2") //to samo co request, tylko zawsze robi GET
     public String httpRequestAction2(@RequestParam String name,
-                                     @RequestParam String surname){
+                                     @RequestParam String surname,
+                                     Model model){
         System.out.println("2222222\n2222222\n2222222\n2222222");
         System.out.println(name);
         System.out.println(surname);
+        model.addAttribute("isLogged",this.sessionObject.isLogged());
         //http://127.0.0.1:8080/cos2?name=test&surname=zupa
         //Pierwszy z ? a każdy następny z &
-        return "main";
+        return "contact";
     }
 }

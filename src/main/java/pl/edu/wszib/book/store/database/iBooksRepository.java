@@ -7,4 +7,5 @@ import java.util.List;
 public interface iBooksRepository {
 
     List<Book> getAllBooks();
+    Book getBookByISBN(String isbn);
 }
