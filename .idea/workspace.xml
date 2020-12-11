@@ -22,19 +22,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de7de7ba-f28e-47c1-b6e5-f9bea5accd80" name="Default Changelist" comment="Dziewiąty Commit">
-      <change afterPath="$PROJECT_DIR$/.idea/BookStore.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/edit.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/edit.html" afterDir="false" />
+    <list default="true" id="de7de7ba-f28e-47c1-b6e5-f9bea5accd80" name="Default Changelist" comment="Dziesiąty Commit">
       <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/book/store/controllers/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/book/store/controllers/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/book/store/controllers/BasketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/book/store/controllers/BasketController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/book/store/controllers/CommonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/book/store/controllers/CommonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/book/store/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/book/store/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/book/store/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/book/store/model/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/book/store/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/book/store/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +142,7 @@
       <workItem from="1607677787179" duration="169000" />
       <workItem from="1607678943799" duration="35000" />
       <workItem from="1607679080233" duration="84000" />
-      <workItem from="1607679179053" duration="4793000" />
+      <workItem from="1607679179053" duration="5094000" />
     </task>
     <task id="LOCAL-00001" summary="Pierwszy Commint">
       <created>1605871762866</created>
@@ -246,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607085665809</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Dziesiąty Commit">
+      <created>1607684016803</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1607684016803</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,6 +270,7 @@
     <MESSAGE value="Siódmy Commit" />
     <MESSAGE value="Ósmy Commit" />
     <MESSAGE value="Dziewiąty Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dziewiąty Commit" />
+    <MESSAGE value="Dziesiąty Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dziesiąty Commit" />
   </component>
 </project>
