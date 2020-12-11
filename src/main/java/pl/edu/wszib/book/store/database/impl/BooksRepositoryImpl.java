@@ -7,7 +7,7 @@ import pl.edu.wszib.book.store.model.Book;
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
+
 public class BooksRepositoryImpl implements iBooksRepository {
 
     private final List<Book> books = new ArrayList<>();

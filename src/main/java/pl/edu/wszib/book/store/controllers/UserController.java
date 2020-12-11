@@ -37,10 +37,10 @@ public class UserController {
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String loginSubmit(@ModelAttribute User user){
-        if (!sessionObject.isLogged()) {
+        this.sessionObject.setLoggedUser(this.usersRepository.Authenticate(user));
+        if(!this.sessionObject.isLogged()){
             return "redirect:http://localhost:8080/login";
         }
-        this.sessionObject.setLoggedUser(this.usersRepository.Authenticate(user));
         return "redirect:/main";
     }
 
@@ -52,6 +52,9 @@ public class UserController {
 
     @RequestMapping(value = "/register", method = RequestMethod.GET)
     public String register(Model model){
+        if(this.sessionObject.isLogged()){
+            return "redirect:/main";
+        }
         model.addAttribute("RegistrationModel", new RegistrationModel());
         model.addAttribute("isLogged", sessionObject.isLogged());
         model.addAttribute("info", sessionObject.getInfo());
@@ -60,6 +63,9 @@ public class UserController {
 
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     public String registerSubmit(@ModelAttribute RegistrationModel registrationModel){
+        if(this.sessionObject.isLogged()){
+            return "redirect:/main";
+        }
         Pattern regexp = Pattern.compile("[A-Za-z0-9]{5}.*");
         Matcher loginMatcher = regexp.matcher(registrationModel.getLogin());
         Matcher passMatcher = regexp.matcher(registrationModel.getPass());

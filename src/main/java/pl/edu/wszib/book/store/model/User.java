@@ -11,9 +11,25 @@ public class User {
     }
 
     public User(String login, String pass, Role rola) {
+        this.id = 0;
         this.login = login;
         this.pass = pass;
         this.rola = rola;
+    }
+
+    private User(int id, String login, String pass, Role rola) {
+        this.id = id;
+        this.login = login;
+        this.pass = pass;
+        this.rola = rola;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getLogin() {

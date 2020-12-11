@@ -28,7 +28,7 @@ public class BasketController {
         }
         model.addAttribute("isLogged", sessionObject.isLogged());
         model.addAttribute("books", sessionObject.getBasket());
-        double sum = 0;
+        double sum = 0.0;
         for(Book book : this.sessionObject.getBasket()){
             sum += book.getPrice()*book.getPieces();
         }

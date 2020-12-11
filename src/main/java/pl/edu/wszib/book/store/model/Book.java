@@ -13,6 +13,16 @@ public class Book {
     }
 
     public Book(String title, String author, String isbn, double price, int pieces) {
+        this.id = 0;
+        this.title = title;
+        this.author = author;
+        this.isbn = isbn;
+        this.price = price;
+        this.pieces = pieces;
+    }
+
+    public Book(int id, String title, String author, String isbn, double price, int pieces) {
+        this.id = id;
         this.title = title;
         this.author = author;
         this.isbn = isbn;
@@ -21,7 +31,15 @@ public class Book {
     }
 
     public Book clone(){
-        return new Book(this.title, this.author, this.isbn, this.pieces, this.pieces);
+        return new Book(this.id, this.title, this.author, this.isbn, this.price, this.pieces);
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getTitle() {
