@@ -28,7 +28,7 @@ public class CommonController {
         model.addAttribute("books", this.booksRepository.getAllBooks());
         model.addAttribute("isLogged", this.sessionObject.isLogged());
         if(this.sessionObject.isLogged()) {
-            model.addAttribute("role", this.sessionObject.getLoggedUser().getRola());
+            model.addAttribute("role", this.sessionObject.getLoggedUser().getRola().toString());
         }else{
             model.addAttribute("role", null);
         }
@@ -44,7 +44,7 @@ public class CommonController {
     @RequestMapping(value = "/XAMPP", method = RequestMethod.GET)
     public String testPage(){
         //experyment czy działa redirect
-        return "redirect:https://localhost/phpmyadmin";
+        return "redirect:http://localhost/phpmyadmin";
     }
 
     @RequestMapping(value = "/cos/{param1}/{param2}", method = RequestMethod.GET)

@@ -23,6 +23,9 @@ public class BasketController {
 
     @RequestMapping(value = "/koszyk", method = RequestMethod.GET)
     public String stronaKoszyk(Model model){
+        if (!sessionObject.isLogged()) {
+            return "redirect:http://localhost:8080/login";
+        }
         model.addAttribute("isLogged", sessionObject.isLogged());
         model.addAttribute("books", sessionObject.getBasket());
         double sum = 0;
@@ -30,18 +33,15 @@ public class BasketController {
             sum += book.getPrice()*book.getPieces();
         }
         model.addAttribute("suma", sum);
-        if(this.sessionObject.isLogged()){
-            return "koszyk";
-        }
-        return "redirect:http://localhost:8080/login";
+        return "koszyk";
     }
 
     @RequestMapping(value = "/addToBasket/{isbn}", method = RequestMethod.GET)
     public String addToBasket(@PathVariable String isbn){
-        this.sessionObject.addToBasket(booksRepository.getBookByISBN(isbn).clone());
-        if (sessionObject.isLogged()) {
-            return "redirect:/main";
+        if (!sessionObject.isLogged()) {
+            return "redirect:http://localhost:8080/login";
         }
-        return "redirect:http://localhost:8080/login";
+        this.sessionObject.addToBasket(booksRepository.getBookByISBN(isbn).clone());
+        return "redirect:/main";
     }
 }

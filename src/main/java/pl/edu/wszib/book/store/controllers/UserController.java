@@ -37,11 +37,11 @@ public class UserController {
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String loginSubmit(@ModelAttribute User user){
-        this.sessionObject.setLoggedUser(this.usersRepository.Authenticate(user));
-        if(this.sessionObject.isLogged()){
-            return "redirect:/main";
+        if (!sessionObject.isLogged()) {
+            return "redirect:http://localhost:8080/login";
         }
-        return "redirect:http://localhost:8080/login";
+        this.sessionObject.setLoggedUser(this.usersRepository.Authenticate(user));
+        return "redirect:/main";
     }
 
     @RequestMapping(value = "/logout", method = RequestMethod.GET)

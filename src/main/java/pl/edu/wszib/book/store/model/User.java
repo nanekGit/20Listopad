@@ -2,6 +2,7 @@ package pl.edu.wszib.book.store.model;
 
 public class User {
 
+    private int id;
     private String login;
     private String pass;
     private Role rola;
