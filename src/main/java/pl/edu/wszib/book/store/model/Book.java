@@ -1,5 +1,7 @@
 package pl.edu.wszib.book.store.model;
 
+import java.sql.ResultSet;
+
 public class Book {
 
     private int id;
@@ -9,18 +11,6 @@ public class Book {
     private double price;
     private int pieces;
 
-    private Book() {
-    }
-
-    public Book(String title, String author, String isbn, double price, int pieces) {
-        this.id = 0;
-        this.title = title;
-        this.author = author;
-        this.isbn = isbn;
-        this.price = price;
-        this.pieces = pieces;
-    }
-
     public Book(int id, String title, String author, String isbn, double price, int pieces) {
         this.id = id;
         this.title = title;
@@ -28,6 +18,21 @@ public class Book {
         this.isbn = isbn;
         this.price = price;
         this.pieces = pieces;
+    }
+
+    public Book(ResultSet resultSet) {
+        try {
+            this.id = resultSet.getInt("id");
+            this.title = resultSet.getString("title");
+            this.author = resultSet.getString("author");
+            this.isbn = resultSet.getString("isbn");
+            this.price = resultSet.getDouble("price");
+            this.pieces = resultSet.getInt("pieces");
+        } catch (Exception e) {
+        }
+    }
+
+    public Book() {
     }
 
     public Book clone(){

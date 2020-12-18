@@ -1,5 +1,8 @@
 package pl.edu.wszib.book.store.model;
 
+import pl.edu.wszib.book.store.model.enums.Role;
+import java.sql.ResultSet;
+
 public class User {
 
     private int id;
@@ -7,21 +10,24 @@ public class User {
     private String pass;
     private Role rola;
 
-    public User() {
-    }
-
-    public User(String login, String pass, Role rola) {
-        this.id = 0;
-        this.login = login;
-        this.pass = pass;
-        this.rola = rola;
-    }
-
-    private User(int id, String login, String pass, Role rola) {
+    public User(int id, String login, String pass, Role rola) {
         this.id = id;
         this.login = login;
         this.pass = pass;
         this.rola = rola;
+    }
+
+    public User(ResultSet resultSet) {
+        try {
+            this.id = resultSet.getInt("id");
+            this.login = resultSet.getString("login");
+            this.pass = resultSet.getString("pass");
+            this.rola = Role.valueOf(resultSet.getString("rola"));
+        } catch (Exception e) {
+        }
+    }
+
+    public User() {
     }
 
     public int getId() {

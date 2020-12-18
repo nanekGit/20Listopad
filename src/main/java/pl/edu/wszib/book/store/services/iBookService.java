@@ -1,13 +1,12 @@
-package pl.edu.wszib.book.store.database;
+package pl.edu.wszib.book.store.services;
 
 import pl.edu.wszib.book.store.model.Book;
 
 import java.util.List;
 
-public interface iBooksRepository {
+public interface iBookService {
 
     List<Book> getAllBooks();
-    Book getBookByISBN(String isbn);
     Book getBookByID(int ID);
     void updateBook(Book book);
 }

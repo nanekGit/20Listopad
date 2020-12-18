@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import pl.edu.wszib.book.store.database.iBooksRepository;
+import pl.edu.wszib.book.store.services.iBookService;
 import pl.edu.wszib.book.store.session.SessionObject;
 
 import javax.annotation.Resource;
@@ -13,7 +14,7 @@ import javax.annotation.Resource;
 public class CommonController {
 
     @Autowired
-    iBooksRepository booksRepository;
+    iBookService bookService;
 
     @Resource
     SessionObject sessionObject;
@@ -25,7 +26,7 @@ public class CommonController {
 
     @RequestMapping(value = "/main", method = RequestMethod.GET)
     public String main(Model model){
-        model.addAttribute("books", this.booksRepository.getAllBooks());
+        model.addAttribute("books", this.bookService.getAllBooks());
         model.addAttribute("isLogged", this.sessionObject.isLogged());
         if(this.sessionObject.isLogged()) {
             model.addAttribute("role", this.sessionObject.getLoggedUser().getRola().toString());
@@ -40,6 +41,17 @@ public class CommonController {
         model.addAttribute("isLogged",this.sessionObject.isLogged());
         return "contact";
     }
+
+
+
+
+
+
+
+
+
+
+
 
     @RequestMapping(value = "/XAMPP", method = RequestMethod.GET)
     public String testPage(){

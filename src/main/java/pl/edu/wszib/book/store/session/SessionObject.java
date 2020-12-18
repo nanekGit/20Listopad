@@ -44,7 +44,7 @@ public class SessionObject {
 
     public void addToBasket(Book book){
         for(Book bookFromBasket : basket){
-            if(bookFromBasket.getIsbn().equals(book.getIsbn())){
+            if(bookFromBasket.getId()==book.getId()){
                 bookFromBasket.setPieces(bookFromBasket.getPieces()+1);
                 return;
             }

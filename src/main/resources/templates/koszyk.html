@@ -2,7 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Kontakt</title>
+    <title>Koszyk</title>
     <link rel="stylesheet" href="/koszyk.css">
     <link rel="stylesheet" href="/commons.css">
 </head>
@@ -25,7 +25,7 @@
             <div class="title" th:text="${book.title}"></div>
             <div class="pieces" th:text="${book.pieces}"></div>
             <div class="price" th:text="${book.price} + ' zł'"></div>
-            <div class="total" th:text="${book.price} * ${book.pieces} + ' zł'"></div>
+            <div class="total" th:text="${book.price * book.pieces} + ' zł'"></div>
         </div>
     </th:block>
 
