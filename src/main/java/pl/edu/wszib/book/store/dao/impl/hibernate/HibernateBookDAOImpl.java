@@ -20,7 +20,7 @@ public class HibernateBookDAOImpl implements iBookDAO {
     @Override
     public List<Book> getAllBooks() {
         Session session = this.sessionFactory.openSession();
-        Query<Book> query = (Query<Book>)session.createQuery("FROM pl.edu.wszib.book.store.model.Book");
+        Query<Book> query = session.createQuery("FROM pl.edu.wszib.book.store.model.Book");
         List<Book> books = query.getResultList();
         session.close();
         return books;
@@ -57,6 +57,5 @@ public class HibernateBookDAOImpl implements iBookDAO {
         }finally {
             session.close();
         }
-
     }
 }
