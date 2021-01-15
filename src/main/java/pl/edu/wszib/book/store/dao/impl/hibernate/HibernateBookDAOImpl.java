@@ -1,67 +1,62 @@
 package pl.edu.wszib.book.store.dao.impl.hibernate;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 import pl.edu.wszib.book.store.dao.iBookDAO;
 import pl.edu.wszib.book.store.model.Book;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.ArrayList;
 import java.util.List;
 
-//Jeszcze nie dodane
+@Repository
 public class HibernateBookDAOImpl implements iBookDAO {
 
     @Autowired
-    Connection connection;
+    SessionFactory sessionFactory;
 
     @Override
     public List<Book> getAllBooks() {
-        List<Book> books = new ArrayList<>();
-        try{
-            String sql = "SELECT * FROM tbook;";
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            ResultSet resultSet = preparedStatement.executeQuery();
-
-            while(resultSet.next()){
-                books.add(new Book(resultSet));
-            }
-        }catch (Exception e){
-        }
+        Session session = this.sessionFactory.openSession();
+        Query<Book> query = (Query<Book>)session.createQuery("FROM pl.edu.wszib.book.store.model.Book");
+        List<Book> books = query.getResultList();
+        session.close();
         return books;
     }
 
     @Override
-    public Book getBookByID(int ID) {
+    public Book getBookByID(int id) {
+        Session session = this.sessionFactory.openSession();
+        Query<Book> query = session.createQuery("FROM pl.edu.wszib.book.store.model.Book WHERE id = :id");
+        query.setParameter("id", id);
+        Book result = null;
         try{
-            String sql = "SELECT * FROM tbook WHERE id = ?;";
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setInt(1,ID);
-            ResultSet resultSet = preparedStatement.executeQuery();
-
-            if(resultSet.next()){
-                return new Book(resultSet);
-            }
+            result = query.getSingleResult();
         }catch (Exception e){
+            e.printStackTrace();
         }
-        return null;
+        session.close();
+        return result;
     }
 
     @Override
     public void updateBook(Book book) {
+        Session session = this.sessionFactory.openSession();
+        Transaction tx = null;
         try{
-            String sql = "UPDATE tbook SET title = ?, author = ?, isbn = ?, price = ?, pieces = ? WHERE id = ?;";
-            PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setString(1,book.getTitle());
-            preparedStatement.setString(2,book.getAuthor());
-            preparedStatement.setString(3,book.getIsbn());
-            preparedStatement.setDouble(4,book.getPrice());
-            preparedStatement.setInt(5,book.getPieces());
-            preparedStatement.setInt(6,book.getId());
-
-            preparedStatement.executeUpdate();
+            tx = session.beginTransaction();
+            session.update(book);
+            tx.commit();
         }catch (Exception e){
+            e.printStackTrace();
+            if(tx != null){
+                tx.rollback();
+            }
+        }finally {
+            session.close();
         }
+
     }
 }

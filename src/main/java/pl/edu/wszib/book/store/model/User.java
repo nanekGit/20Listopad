@@ -1,13 +1,20 @@
 package pl.edu.wszib.book.store.model;
 
 import pl.edu.wszib.book.store.model.enums.Role;
+
+import javax.persistence.*;
 import java.sql.ResultSet;
 
+@Entity(name = "tuser")
 public class User {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String login;
     private String pass;
+    @Column(name = "role")
+    @Enumerated(EnumType.STRING)
     private Role rola;
 
     public User(int id, String login, String pass, Role rola) {
@@ -28,6 +35,16 @@ public class User {
     }
 
     public User() {
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ",\n login='" + login + '\'' +
+                ",\n pass='" + pass + '\'' +
+                ",\n rola=" + rola +
+                '}';
     }
 
     public int getId() {

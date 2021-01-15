@@ -9,7 +9,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-@Repository
+
 public class UserDAOImpl implements iUserDAO {
 
     @Autowired
@@ -34,7 +34,7 @@ public class UserDAOImpl implements iUserDAO {
     @Override
     public boolean persistUser(User user) {
         try{
-            String sql = "INSERT INTO tuser (login, pass, rola) VALUES (?, ?, ?);";
+            String sql = "INSERT INTO tuser (login, pass, role) VALUES (?, ?, ?);";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1,user.getLogin());
             preparedStatement.setString(2,user.getPass());

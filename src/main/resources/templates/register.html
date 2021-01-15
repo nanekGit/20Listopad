@@ -14,7 +14,7 @@
 <div th:replace="fragments.html :: menu"></div>
 
 <form id="register-form" method="post" onsubmit="return validate()">
-    <p th:if="${info}" th:text="${info}" id="error"></p>
+    <p th:if="${info}" th:text="${info}" class="error"></p>
     <input type="text" placeholder="Login" th:field="*{RegistrationModel.login}" id="login">
     <input type="password" placeholder="Hasło" th:field="*{RegistrationModel.pass}" id="pass">
     <input type="password" placeholder="Powtórz Hasło" th:field="*{RegistrationModel.pass2}" id="pass2">

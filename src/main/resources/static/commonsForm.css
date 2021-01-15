@@ -37,3 +37,14 @@ form input[type="submit"]:hover{
     color: white;
     background-color: black;
 }
+
+input:read-only {
+    background-color: gray;
+    cursor: default;
+}
+
+.error{
+    color: red;
+    font-size: 26px;
+    text-align: center;
+}

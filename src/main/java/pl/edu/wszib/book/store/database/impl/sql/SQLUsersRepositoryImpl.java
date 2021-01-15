@@ -1,7 +1,6 @@
 package pl.edu.wszib.book.store.database.impl.sql;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import pl.edu.wszib.book.store.database.iUsersRepository;
 import pl.edu.wszib.book.store.model.enums.Role;
 import pl.edu.wszib.book.store.model.User;
@@ -10,7 +9,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-@Component
+
 public class SQLUsersRepositoryImpl implements iUsersRepository {
 
     @Autowired
@@ -43,7 +42,7 @@ public class SQLUsersRepositoryImpl implements iUsersRepository {
             return false;
         }
         try{
-            String sql = "INSERT INTO tuser (login, pass, rola) VALUES (?, ?, ?);";
+            String sql = "INSERT INTO tuser (login, pass, role) VALUES (?, ?, ?);";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             preparedStatement.setString(1,user.getLogin());
             preparedStatement.setString(2,user.getPass());

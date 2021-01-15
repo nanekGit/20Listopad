@@ -25,6 +25,9 @@ public class SessionObject {
     }
 
     public void setLoggedUser(User loggedUser) {
+        if(loggedUser==null){
+            this.basket.clear();
+        }
         this.loggedUser = loggedUser;
     }
 

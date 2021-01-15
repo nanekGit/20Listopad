@@ -6,39 +6,23 @@ import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import pl.edu.wszib.book.store.dao.iUserDAO;
-import pl.edu.wszib.book.store.model.User;
+import pl.edu.wszib.book.store.dao.iOrderDAO;
+import pl.edu.wszib.book.store.model.Order;
 
 @Repository
-public class HibernateUserDAOImpl implements iUserDAO {
+public class OrderDAOImpl implements iOrderDAO {
 
     @Autowired
     SessionFactory sessionFactory;
 
     @Override
-    public User getUserByLogin(String login) {
-        Session session = this.sessionFactory.openSession();
-        Query<User> query = session.createQuery("FROM pl.edu.wszib.book.store.model.User WHERE login = :login");
-        query.setParameter("login", login);
-        User result = null;
-        try{
-            result = query.getSingleResult();
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-        session.close();
-        return result;
-    }
-
-    @Override
-    public boolean persistUser(User user) {
+    public void saveOrder(Order order) {
         Session session = this.sessionFactory.openSession();
         Transaction tx = null;
         try{
             tx = session.beginTransaction();
-            session.save(user);
+            session.save(order);
             tx.commit();
-            return true;
         } catch (Exception e) {
             e.printStackTrace();
             if (tx != null) {
@@ -47,6 +31,20 @@ public class HibernateUserDAOImpl implements iUserDAO {
         } finally {
             session.close();
         }
-        return false;
+    }
+
+    @Override
+    public Order getOrderById(int id) {
+        Session session = this.sessionFactory.openSession();
+        Query<Order> query = session.createQuery("FROM pl.edu.wszib.book.store.model.Order WHERE id = :id");
+        query.setParameter("id", id);
+        Order result = null;
+        try{
+            result = query.getSingleResult();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        session.close();
+        return result;
     }
 }

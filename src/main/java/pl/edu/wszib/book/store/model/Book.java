@@ -1,9 +1,13 @@
 package pl.edu.wszib.book.store.model;
 
+import javax.persistence.*;
 import java.sql.ResultSet;
 
+@Entity(name = "tbook")
 public class Book {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String title;
     private String author;
@@ -33,6 +37,18 @@ public class Book {
     }
 
     public Book() {
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ",\n title='" + title + '\'' +
+                ",\n author='" + author + '\'' +
+                ",\n isbn='" + isbn + '\'' +
+                ",\n price=" + price +
+                ",\n pieces=" + pieces +
+                '}';
     }
 
     public Book clone(){

@@ -11,7 +11,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-@Repository
+
 public class BookDAOImpl implements iBookDAO {
 
     @Autowired
