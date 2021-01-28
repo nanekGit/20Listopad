@@ -86,9 +86,6 @@
     <property name="show.run.dashboard.notification" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\User\IdeaProjects\BookStore\src\test\java\pl\edu\wszib\book\store\services\impl" />
-    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="pl.edu.wszib.book.store.model" />
     </key>
