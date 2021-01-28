@@ -23,9 +23,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de7de7ba-f28e-47c1-b6e5-f9bea5accd80" name="Default Changelist" comment="Trzynasty Commit">
+      <change afterPath="$PROJECT_DIR$/src/test/java/pl/edu/wszib/book/store/model/BookTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pl/edu/wszib/book/store/services/impl/BasketServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pl/edu/wszib/book/store/services/impl/BookServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pl/edu/wszib/book/store/services/impl/OrderServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pl/edu/wszib/book/store/services/impl/UserServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/BookStore.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BookStore.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/book/store/dao/impl/hibernate/HibernateBookDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/book/store/dao/impl/hibernate/HibernateBookDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +76,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/java/pl/edu/wszib/book/store/services/impl" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -76,13 +85,25 @@
     <property name="settings.editor.selected.configurable" value="SQL Dialects" />
     <property name="show.run.dashboard.notification" value="false" />
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\BookStore\src\test\java\pl\edu\wszib\book\store\services\impl" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="pl.edu.wszib.book.store.model" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.BookTest">
+    <configuration name="BookTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BookStore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pl.edu.wszib.book.store.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pl.edu.wszib.book.store.model" />
+      <option name="MAIN_CLASS_NAME" value="pl.edu.wszib.book.store.model.BookTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -103,6 +124,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BookTest" />
         <item itemvalue="Spring Boot.App" />
       </list>
     </recent_temporary>
@@ -148,7 +170,15 @@
       <workItem from="1610634058250" duration="257000" />
       <workItem from="1610651881511" duration="3378000" />
       <workItem from="1610657665872" duration="3294000" />
-      <workItem from="1610703119536" duration="12127000" />
+      <workItem from="1610703119536" duration="12178000" />
+      <workItem from="1611306678844" duration="2361000" />
+      <workItem from="1611309109288" duration="53000" />
+      <workItem from="1611309174121" duration="707000" />
+      <workItem from="1611310303267" duration="16000" />
+      <workItem from="1611317614236" duration="1379000" />
+      <workItem from="1611319005722" duration="1000" />
+      <workItem from="1611846798222" duration="721000" />
+      <workItem from="1611848689066" duration="501000" />
     </task>
     <task id="LOCAL-00001" summary="Pierwszy Commint">
       <created>1605871762866</created>
@@ -318,7 +348,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610714197403</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Trzynasty Commit">
+      <created>1610715673463</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1610715673463</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
