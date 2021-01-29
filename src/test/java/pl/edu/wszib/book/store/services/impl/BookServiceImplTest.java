@@ -8,30 +8,6 @@ import pl.edu.wszib.book.store.services.iBookService;
 
 import java.util.List;
 
-@Service
-public class BookServiceImplTest implements iBookService {
+public class BookServiceImplTest{
 
-    @Autowired
-    iBookDAO bookDAO;
-
-    @Override
-    public List<Book> getAllBooks() {
-        return this.bookDAO.getAllBooks();
-    }
-
-    @Override
-    public Book getBookByID(int ID) {
-        return this.bookDAO.getBookByID(ID);
-    }
-
-    @Override
-    public void updateBook(Book book) {
-        Book bookFromDB = this.bookDAO.getBookByID(book.getId());
-        bookFromDB.setTitle(book.getTitle());
-        bookFromDB.setAuthor(book.getAuthor());
-        bookFromDB.setIsbn(book.getIsbn());
-        bookFromDB.setPieces(book.getPieces());
-        bookFromDB.setPrice(book.getPrice());
-        this.bookDAO.updateBook(bookFromDB);
-    }
 }

@@ -6,19 +6,6 @@ import pl.edu.wszib.book.store.dao.iOrderDAO;
 import pl.edu.wszib.book.store.model.Order;
 import pl.edu.wszib.book.store.services.iOrderService;
 
-@Service
-public class OrderServiceImplTest implements iOrderService {
+public class OrderServiceImplTest{
 
-    @Autowired
-    iOrderDAO iOrderDAO;
-
-    @Override
-    public void saveOrder(Order order) {
-        this.iOrderDAO.saveOrder(order);
-    }
-
-    @Override
-    public Order getOrderById(int id) {
-        return this.iOrderDAO.getOrderById(id);
-    }
 }

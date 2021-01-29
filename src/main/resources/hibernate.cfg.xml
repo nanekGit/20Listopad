@@ -34,7 +34,7 @@
         </property>
 
         <!-- Wygląd tabelek -->
-        <mapping class = "pl.edu.wszib.book.store.model.BookTest"/>
+        <mapping class = "pl.edu.wszib.book.store.model.Book"/>
         <mapping class = "pl.edu.wszib.book.store.model.User"/>
         <mapping class = "pl.edu.wszib.book.store.model.Order"/>
         <mapping class = "pl.edu.wszib.book.store.model.OrderPosition"/>

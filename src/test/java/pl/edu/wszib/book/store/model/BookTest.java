@@ -3,8 +3,6 @@ package pl.edu.wszib.book.store.model;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.sql.ResultSet;
-
 public class BookTest {
 
     @Test

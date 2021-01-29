@@ -22,19 +22,21 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de7de7ba-f28e-47c1-b6e5-f9bea5accd80" name="Default Changelist" comment="Trzynasty Commit">
-      <change afterPath="$PROJECT_DIR$/src/test/java/pl/edu/wszib/book/store/model/BookTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pl/edu/wszib/book/store/services/impl/BasketServiceImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pl/edu/wszib/book/store/services/impl/BookServiceImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pl/edu/wszib/book/store/services/impl/OrderServiceImplTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pl/edu/wszib/book/store/services/impl/UserServiceImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="de7de7ba-f28e-47c1-b6e5-f9bea5accd80" name="Default Changelist" comment="Czternasty Commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/book/store/rest/controllers/SimpleRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pl/edu/wszib/book/store/configuration/AppConfigurationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pl/edu/wszib/book/store/session/SessionObjectTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/BookStore.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BookStore.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/book/store/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/wszib/book/store/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pl/edu/wszib/book/store/model/BookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/edu/wszib/book/store/model/BookTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pl/edu/wszib/book/store/services/impl/BasketServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/edu/wszib/book/store/services/impl/BasketServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pl/edu/wszib/book/store/services/impl/BookServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/edu/wszib/book/store/services/impl/BookServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pl/edu/wszib/book/store/services/impl/OrderServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/edu/wszib/book/store/services/impl/OrderServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pl/edu/wszib/book/store/services/impl/UserServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/edu/wszib/book/store/services/impl/UserServiceImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +78,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/java/pl/edu/wszib/book/store/services/impl" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/java/pl/edu/wszib/book/store" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -86,22 +88,245 @@
     <property name="show.run.dashboard.notification" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\BookStore\src\test\java\pl\edu\wszib\book\store" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="pl.edu.wszib.book.store.configuration" />
+      <recent name="pl.edu.wszib.book.store.session" />
       <recent name="pl.edu.wszib.book.store.model" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BookTest">
-    <configuration name="BookTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/api/endpoint3/6" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/api/endpoint3/6" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/api/endpoint1" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="{" />
+                <option name="value" value="" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="  &quot;id&quot;" />
+                <option name="value" value="1," />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="  &quot;login&quot;" />
+                <option name="value" value="&quot;12&quot;," />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="  &quot;pass&quot;" />
+                <option name="value" value="&quot;13&quot;," />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="  &quot;rola&quot;" />
+                <option name="value" value="&quot;USER&quot;" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="}" />
+                <option name="value" value="" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="DELETE" />
+          <option name="urlBase" value="http://localhost:8080/api/endpoint4" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/api/endpoint4" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/api/endpoint3/4" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/api/endpoint3/4" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/api/endpoint3/4" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/api/endpoint1" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="PUT" />
+          <option name="urlBase" value="http://localhost:8080/api/endpoint1" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="{" />
+                <option name="value" value="" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="  &quot;id&quot;" />
+                <option name="value" value="1," />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="  &quot;login&quot;" />
+                <option name="value" value="&quot;12&quot;," />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="  &quot;pass&quot;" />
+                <option name="value" value="&quot;13&quot;," />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="  &quot;rola&quot;" />
+                <option name="value" value="&quot;USER&quot;" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="}" />
+                <option name="value" value="" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/api/endpoint2" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/api/endpoint2" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8080/api/endpoint1" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="{" />
+                <option name="value" value="" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="&quot;id&quot;" />
+                <option name="value" value="1" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="&quot;login&quot;" />
+                <option name="value" value="marek" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="&quot;pass&quot;" />
+                <option name="value" value="marek" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="&quot;rola&quot;" />
+                <option name="value" value="USER" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="}" />
+                <option name="value" value="" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.App">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in generated-requests" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="2" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="UserServiceImplTest.testIncorrectPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BookStore" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="pl.edu.wszib.book.store.model.*" />
+          <option name="PATTERN" value="pl.edu.wszib.book.store.services.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="pl.edu.wszib.book.store.model" />
-      <option name="MAIN_CLASS_NAME" value="pl.edu.wszib.book.store.model.BookTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="pl.edu.wszib.book.store.services.impl" />
+      <option name="MAIN_CLASS_NAME" value="pl.edu.wszib.book.store.services.impl.UserServiceImplTest" />
+      <option name="METHOD_NAME" value="testIncorrectPassword" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -121,8 +346,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BookTest" />
         <item itemvalue="Spring Boot.App" />
+        <item itemvalue="HTTP Request.generated-requests#2" />
+        <item itemvalue="HTTP Request.generated-requests#1" />
+        <item itemvalue="HTTP Request.All in generated-requests" />
+        <item itemvalue="JUnit.UserServiceImplTest.testIncorrectPassword" />
       </list>
     </recent_temporary>
   </component>
@@ -175,7 +403,11 @@
       <workItem from="1611317614236" duration="1379000" />
       <workItem from="1611319005722" duration="1000" />
       <workItem from="1611846798222" duration="721000" />
-      <workItem from="1611848689066" duration="501000" />
+      <workItem from="1611848689066" duration="1268000" />
+      <workItem from="1611903479506" duration="468000" />
+      <workItem from="1611911873371" duration="2706000" />
+      <workItem from="1611914860182" duration="585000" />
+      <workItem from="1611915538299" duration="7220000" />
     </task>
     <task id="LOCAL-00001" summary="Pierwszy Commint">
       <created>1605871762866</created>
@@ -352,7 +584,21 @@
       <option name="project" value="LOCAL" />
       <updated>1610715673463</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Czternasty Commit">
+      <created>1611849216168</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1611849216168</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Czternasty Commit">
+      <created>1611849307409</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1611849307409</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -384,7 +630,8 @@
     <MESSAGE value="Jedenasty Commit" />
     <MESSAGE value="Dwunasty Commit" />
     <MESSAGE value="Trzynasty Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Trzynasty Commit" />
+    <MESSAGE value="Czternasty Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Czternasty Commit" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
